@@ -4,8 +4,8 @@ const LoaderHOC = (WrappedComponent) => {
   class HOC extends Component {
 
     isLoading = () => {
-      const {loading} = this.props;
-      
+      const { loading } = this.props;
+
       if(loading === null || loading) {
         return true;
       }
