@@ -3,17 +3,17 @@ import './HOCLoader.css';
 const LoaderHOC = (WrappedComponent) => {
   class HOC extends Component {
 
-    displayLoading = () => {
+    isLoading = () => {
       const {loading} = this.props;
+      
       if(loading === null || loading) {
         return true;
-      } else {
-        return false;
       }
+      return false;
     }
 
     render() {
-      return this.displayLoading() ? <h1 className="loader">Loader!</h1> : <WrappedComponent {...this.props} />
+      return this.isLoading() ? <h1 className="loader">Loader!</h1> : <WrappedComponent {...this.props} />
     }    
   }
   return HOC;
