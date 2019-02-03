@@ -12,6 +12,8 @@ class App extends Component {
       this.setState({ loading: false })
     }, 3000)
   }
+  
+  //Added a comment for testing.
 
   componentWillMount() {
     this.setState({ loading: true })
